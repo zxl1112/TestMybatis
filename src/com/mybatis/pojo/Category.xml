@@ -8,4 +8,8 @@
             select * from   category_ where
             name="test"
         </select>
+    <insert id="insertCategory" parameterType="Category">
+        insert into category_ ( name )
+        values (#{name})
+    </insert>
 </mapper>
