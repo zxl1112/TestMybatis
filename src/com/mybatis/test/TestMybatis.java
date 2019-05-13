@@ -20,8 +20,8 @@ public class TestMybatis {
         SqlSession session = sqlSessionFactory.openSession();
 
         Category c = new Category();
-        c.setName("新增加的Category");
-        session.insert("addCategory",c);
+        c.setName("apple12");   //输入为带汉字的时则会出错
+        session.insert("insertCategory",c);
 
         listAll(session);
 
